@@ -9,7 +9,7 @@ const Contact = () => {
         <h3>SiVu -kumppanit</h3>
         <h4>Sipilä & Vuorimaa</h4>
 
-        <div>
+        <div className={styles.row}>
           <div>
             <p>Katri Sipilä</p>
             <a href="mailto:ks@katrisipila.com">ks@katrisipila.com</a>
