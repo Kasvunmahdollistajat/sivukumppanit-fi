@@ -1,0 +1,21 @@
+@use "../_variables" as *;
+
+.customerPromise {
+  ul li {
+    padding: 0.25rem 0;
+    text-align: left;
+    margin-left: 15%;
+  }
+}
+
+@media (max-width: $tablet) {
+  .services ul li {
+    margin-left: 5%;
+  }
+}
+
+@media (max-width: $phone) {
+  .services ul li {
+    margin-left: 0;
+  }
+}

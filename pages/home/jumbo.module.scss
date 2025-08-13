@@ -1,0 +1,72 @@
+@use "../_variables" as *;
+
+.jumbo {
+  height: calc(100vh - $nav-bar-height);
+  text-align: center;
+  background-image: url("/jumbo.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.jumboWrapper {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  color: white;
+  height: 100%;
+
+  div {
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 5rem;
+    margin: 0;
+    padding-top: 25vh;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: white;
+  }
+}
+
+@media (max-width: $desktop) {
+  .jumboWrapper {
+    div {
+      padding: 1rem;
+    }
+    h1 {
+      font-size: 4rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .jumboWrapper {
+    h1 {
+      font-size: 3rem;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media (max-width: $phone) {
+  .jumboWrapper {
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1rem;
+    }
+  }
+}

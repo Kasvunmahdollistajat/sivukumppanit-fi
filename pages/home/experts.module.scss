@@ -1,0 +1,66 @@
+@use "../_variables" as *;
+
+.experts {
+  .partnerList ul {
+    text-align: left;
+    width: 50%;
+    margin-left: 30%;
+
+    li {
+      padding: 0.3rem 0;
+    }
+  }
+}
+
+.person {
+  display: flex;
+  flex-direction: row;
+
+  & > div {
+    padding: 1rem;
+  }
+
+  & > div:nth-child(1) {
+    flex-grow: 1;
+    max-width: 40%;
+
+    img {
+      width: 100%;
+      margin-top: 4rem;
+    }
+  }
+
+  & > div:nth-child(2) {
+    flex-grow: 2;
+    max-width: 60%;
+    text-align: left;
+  }
+
+  span {
+    font-style: italic;
+  }
+}
+
+@media (max-width: $tablet) {
+  .person {
+    flex-direction: column;
+
+    & > div:nth-child(n) {
+      max-width: 100%;
+      text-align: center;
+      padding: 0;
+
+      img {
+        width: 80%;
+        margin-top: 2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: $phone) {
+  .experts .partnerList ul {
+    width: 100%;
+    margin-left: 15%;
+  }
+}

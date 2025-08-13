@@ -1,0 +1,44 @@
+{
+  "name": "sivukumppanit-fi",
+  "version": "1.0.0",
+  "description": "Company website at https://sivukumppanit.fi",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build && cp CNAME ./out && touch ./out/.nojekyll",
+    "start": "next start",
+    "lint": "next lint",
+    "deploy": "gh-pages -d out -t",
+    "test-deploy": "aws s3 sync out s3://sivukumppanit-test --profile rootuser"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kasvunmahdollistajat/sivukumppanit-fi.git"
+  },
+  "author": "Markus Tyrkkö",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Kasvunmahdollistajat/sivukumppanit-fi/issues"
+  },
+  "homepage": "https://sivukumppanit.fi",
+  "packageManager": "yarn@4.6.0",
+  "dependencies": {
+    "@fontsource/raleway": "5.1.1",
+    "next": "15.1.6",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "react-scroll": "1.9.2"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "3.2.0",
+    "@eslint/js": "9.20.0",
+    "@types/node": "22.13.1",
+    "@types/react": "19.0.8",
+    "@types/react-scroll": "1.8.10",
+    "eslint": "9.20.0",
+    "eslint-config-next": "15.1.6",
+    "gh-pages": "6.3.0",
+    "sass": "1.84.0",
+    "typescript": "5.7.3"
+  }
+}

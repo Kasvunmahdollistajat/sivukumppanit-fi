@@ -1,0 +1,88 @@
+@use "../_variables" as *;
+
+.navBar {
+  height: $nav-bar-height;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  img {
+    height: 4rem;
+    padding: 0.5rem;
+  }
+}
+
+.linkWrapper.hidden {
+  display: block; // Do not hide in desktop view
+}
+
+.linkWrapper {
+  padding: 1.75rem 1rem;
+
+  a {
+    color: $link-color;
+    text-decoration: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    color: $main-color;
+  }
+}
+
+.mobileMenu {
+  display: none;
+
+  img {
+    cursor: pointer;
+    margin-top: 0.75rem;
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}
+
+.animate {
+  animation: slideIn 0.2s ease-in;
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+}
+
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: $tablet) {
+  .mobileMenu {
+    display: block;
+  }
+
+  .linkWrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: absolute;
+    top: $nav-bar-height;
+    right: 0;
+    background: white;
+    min-width: 25vw;
+  }
+
+  .linkWrapper.hidden {
+    display: none;
+  }
+}
