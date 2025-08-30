@@ -1,11 +1,28 @@
+@use "../_variables" as *;
+
 .services {
   ul li {
     text-align: left;
     margin-bottom: 1rem;
   }
+
+  width: 150%;
+  margin-left: -25%;
 }
 
 .row {
   display: flex;
   flex-direction: row;
+}
+
+@media (max-width: $tablet) {
+  .services {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@media (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
 }

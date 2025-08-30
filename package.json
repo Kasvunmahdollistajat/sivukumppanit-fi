@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "deploy": "gh-pages -d out -t",
-    "test-deploy": "aws s3 sync out s3://sivukumppanit-test --profile rootuser"
+    "test-deploy": "next build && aws s3 sync out s3://sivukumppanit-test --profile rootuser"
   },
   "repository": {
     "type": "git",
