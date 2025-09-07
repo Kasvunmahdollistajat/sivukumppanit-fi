@@ -1,7 +1,10 @@
 @use "../_variables" as *;
 
 .jumbo {
-  height: calc(100vh - $nav-bar-height);
+  margin-top: 1rem;
+  height: calc(90vh - $nav-bar-height);
+  width: 60%;
+  margin-left: 20%;
   text-align: center;
   background-image: url("/jumbo.jpg");
   background-position: center;
@@ -19,9 +22,9 @@
   }
 
   h1 {
-    font-size: 5rem;
+    font-size: 4rem;
     margin: 0;
-    padding-top: 25vh;
+    padding-top: 42vh;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     color: white;
   }
@@ -33,6 +36,11 @@
 }
 
 @media (max-width: $desktop) {
+  .jumbo {
+    width: 80%;
+    margin-left: 10%;
+  }
+
   .jumboWrapper {
     div {
       padding: 1rem;
@@ -48,6 +56,12 @@
 }
 
 @media (max-width: $tablet) {
+  .jumbo {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 0;
+  }
+
   .jumboWrapper {
     h1 {
       font-size: 3rem;
@@ -60,6 +74,11 @@
 }
 
 @media (max-width: $phone) {
+  .jumbo {
+    width: 100%;
+    margin-left: 0;
+  }
+
   .jumboWrapper {
     h1 {
       font-size: 2rem;
